@@ -1,0 +1,196 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=sawp");
+
+.back-button {
+    color: white;
+    accent-color: red;
+}
+.back-button :hover{
+    color: red;
+    background-color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #0f0f0f;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,   0, 0, 0.1);
+}
+.container header {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+}
+.container .form {
+    margin-top: 30px;
+}
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+.input-box label {
+    color: #ffffff;
+}
+.form :where( .input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #4b4b4b;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+.form .caixa-escolha, .caixa-escolha-mutipla {
+    margin-top: 20px;
+}
+.form .caixa-escolha-mutipla {
+    margin-top: 20px;
+}
+.form .checkbox-container {
+    margin-top: 20px;
+}
+.caixa-escolha h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.escolha-opcoes, .checkbox-options) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.form .escolha .checkbox{
+    column-gap: 5px;
+}
+.escolha, .checkbox input{
+    accent-color: rgb(150, 21, 16);
+}
+.form :where( .escolha input, .escolha label) {
+    cursor: pointer;
+}
+.mutipla :where(input, .select-box) {
+    margin-top: 15px;
+}
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+.form button {
+    height: 55px;
+    width: 100%;
+    color: #FFF;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background: #333;
+}
+.form button:hover{
+    background-color: #707070;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }
+    .form :where(.escolha-opcoes, .escolha) {
+        row-gap: 15px;
+    }
+}
+
+ /* Add this style for the logo and animation */
+ .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0; /* Initial opacity set to 0 for fade-in effect */
+    animation: fadeIn 2s forwards; /* Animation properties: name, duration, and forwards to keep the final state */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slider styles */
+.slider-container {
+    margin-top: 20px;
+    position: relative;
+    accent-color: rgb(218, 21, 14);
+}
+
+.slider-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+.slider::before,
+.slider::after {
+    content: attr(data-value);
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.slider::before {
+    left: 0;
+}
+
+.slider::after {
+    right: 0;
+}
+
+.slider-value {
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+

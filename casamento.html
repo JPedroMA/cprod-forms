@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento Produção Casamento - Cara do Vídeo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add a link to your icon library (assuming you have one) or use an inline SVG -->
+</head>
+
+<body>
+    <!-- Logo container with fade-in animation -->
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="/public/w_logo.png" alt="Logo" width="100" height="100">
+        </a>
+    </div>
+    <section class="container">
+        <header>
+            <a href="index.html" class="back-button">&#8592;</a>&nbsp&nbsp Orçamento de produção - Casamento
+        </header>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>Local</label>
+                <input type="text" placeholder="Digite aqui"/>
+            </div>
+
+            <div class="input-box">
+                <label>Data</label>
+                <input type="date" placeholder="Digite aqui"/>
+            </div>
+
+            <div class="input-box">
+                <label>Contato</label>
+                <input type="tel" placeholder="(__)_____-____"/>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Duração</label>
+                    <input type="text" placeholder="Digite aqui"/>
+                </div>
+                
+
+                <div class="input-box">
+                    <label>Observações (Opcional)</label>
+                    <input type="text" placeholder="Digite aqui"/>
+                </div>
+            </div>
+
+            <div class="checkbox-container">
+                <label>Escolha o que você deseja registrar:</label>
+                <div class="checkbox-options">
+                    <div class="checkbox">
+                        <input type="checkbox" id="makingOfNoiva" name="options[]" value="Making of Noiva">
+                        <label for="makingOfNoiva">Making of Noiva</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="makingOfNoivo" name="options[]" value="Making of Noivo">
+                        <label for="makingOfNoivo">Making of Noivo</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="cerimonia" name="options[]" value="Cerimônia">
+                        <label for="cerimonia">Cerimônia</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="festa" name="options[]" value="Festa">
+                        <label for="festa">Festa</label>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="caixa-escolha-mutipla">
+                <label>Número de convidados</label>
+                <div class="column">
+                    <div class="select-box">
+                        <select>
+                            <option>1-50</option>
+                            <option>50-200</option>
+                            <option>200-500</option>
+                            <option>500+</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label class="slider-label">Tempo do vídeo:</label>
+                <input type="range" class="slider" min="1" max="60" step="1" value="30" id="timeSlider" data-value="30">
+                <span class="slider-value" id="sliderValue">Até 30 minutos</span>
+            </div>
+
+            <button>Enviar</button>   
+        </form>
+    </section>
+
+    <script>
+        // Add script to update slider value indicator
+        const timeSlider = document.getElementById("timeSlider");
+        const sliderValue = document.getElementById("sliderValue");
+
+        timeSlider.addEventListener("input", function () {
+            sliderValue.textContent = this.value + " minutos";
+            this.setAttribute("data-value", this.value);
+        });
+    </script>
+</body>
+
+</html>
