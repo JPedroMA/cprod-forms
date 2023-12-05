@@ -19,34 +19,37 @@
     </div>
     <section class="container">
         <header>
-             Orçamento de produção - Casamento
+            Orçamento de produção - Casamento
         </header>
-        <form action="#" class="form">
+        
+        <form
+            action="https://script.google.com/macros/s/AKfycbyX7Mbh9f2tCFrg5bWk9hJGdRHW9jqV-aMLl1e86s3ahQgsBXMyUDfObJEtEWcIhpI2/exec"
+            method="post" class="form">
             <div class="input-box">
                 <label>Local</label>
-                <input type="text" placeholder="Digite aqui"/>
+                <input type="text" name="local" placeholder="Digite aqui" />
             </div>
 
             <div class="input-box">
                 <label>Data</label>
-                <input type="date" placeholder="Digite aqui"/>
+                <input type="date" name="data" placeholder="Digite aqui" />
             </div>
 
             <div class="input-box">
                 <label>Contato</label>
-                <input type="tel" placeholder="(__)_____-____"/>
+                <input type="tel" name="contato" placeholder="(__)_____-____" />
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label>Duração</label>
-                    <input type="text" placeholder="Digite aqui"/>
+                    <label>Duração do evento</label>
+                    <input type="text" name="duracao" placeholder="Digite aqui" />
                 </div>
-                
+
 
                 <div class="input-box">
                     <label>Observações (Opcional)</label>
-                    <input type="text" placeholder="Digite aqui"/>
+                    <input type="text" name="observacoes" placeholder="Digite aqui" />
                 </div>
             </div>
 
@@ -68,7 +71,7 @@
                     <div class="checkbox">
                         <input type="checkbox" id="festa" name="options[]" value="Festa">
                         <label for="festa">Festa</label>
-                    </div>   
+                    </div>
                 </div>
             </div>
 
@@ -76,7 +79,7 @@
                 <label>Número de convidados</label>
                 <div class="column">
                     <div class="select-box">
-                        <select>
+                        <select name="numConvidados">
                             <option>1-50</option>
                             <option>50-200</option>
                             <option>200-500</option>
@@ -88,11 +91,12 @@
 
             <div class="slider-container">
                 <label class="slider-label">Tempo do vídeo:</label>
-                <input type="range" class="slider" min="1" max="60" step="1" value="30" id="timeSlider" data-value="30">
+                <input type="range" name="tempoVideo" class="slider" min="1" max="60" step="1" value="30"
+                    id="timeSlider" data-value="30">
                 <span class="slider-value" id="sliderValue">Até 30 minutos</span>
             </div>
 
-            <button>Enviar</button>   
+            <button>Enviar</button>
         </form>
     </section>
 
